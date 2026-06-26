@@ -4,29 +4,39 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mohammed Kashkoush | PhD Researcher in AI & Information Systems</title>
-  <link rel="icon" href="/favicon.png">
+  <link rel="icon" href="favicon.png" />
   <meta name="description" content="Mohammed Kashkoush is a direct PhD student in Information Systems at the University of Haifa, researching NLP, LLMs, synthetic data, AI agents, emotion analysis, narrative engagement, and explainable AI." />
-  <meta name="theme-color" content="#080b16" />
+  <meta name="theme-color" content="#060912" />
+  <meta property="og:title" content="Mohammed Kashkoush | AI & Information Systems" />
+  <meta property="og:description" content="NLP, LLMs, AI agents, synthetic data, emotion analysis, narrative engagement, and explainable AI." />
+  <meta property="og:image" content="favicon.png" />
 
   <style>
     :root {
-      --bg: #080b16;
-      --bg-2: #0d1326;
-      --surface: rgba(255, 255, 255, 0.075);
-      --surface-strong: rgba(255, 255, 255, 0.12);
-      --line: rgba(255, 255, 255, 0.14);
+      --bg: #060912;
+      --bg-2: #0a1020;
+      --surface: rgba(12, 18, 35, 0.86);
+      --surface-2: rgba(17, 25, 48, 0.92);
+      --surface-3: rgba(255, 255, 255, 0.075);
+      --line: rgba(219, 231, 255, 0.16);
+      --line-strong: rgba(219, 231, 255, 0.30);
       --text: #f8fbff;
-      --muted: #aeb9d2;
-      --soft: #dce5ff;
+      --soft: #dce7ff;
+      --muted: #b8c4de;
+      --muted-2: #8d9ab8;
       --accent: #8b5cf6;
-      --accent-2: #21e6a7;
+      --accent-2: #19f2bd;
       --accent-3: #38bdf8;
-      --accent-4: #f5c451;
-      --shadow: 0 28px 90px rgba(0, 0, 0, 0.42);
-      --radius-xl: 34px;
-      --radius-lg: 24px;
+      --accent-4: #f8c55a;
+      --pink: #ff4ca8;
+      --shadow: 0 34px 110px rgba(0, 0, 0, 0.52);
+      --shadow-soft: 0 18px 56px rgba(0, 0, 0, 0.32);
+      --radius-xl: 36px;
+      --radius-lg: 26px;
       --radius-md: 18px;
       --max-width: 1180px;
+      --mx: 50vw;
+      --my: 38vh;
     }
 
     * {
@@ -37,6 +47,7 @@
 
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: 92px;
     }
 
     body {
@@ -44,38 +55,101 @@
       color: var(--text);
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background:
-        radial-gradient(circle at 8% 8%, rgba(139, 92, 246, 0.38), transparent 28%),
-        radial-gradient(circle at 88% 12%, rgba(33, 230, 167, 0.2), transparent 28%),
-        radial-gradient(circle at 50% 92%, rgba(56, 189, 248, 0.17), transparent 32%),
-        linear-gradient(180deg, #080b16 0%, #0a1020 48%, #080b16 100%);
-      line-height: 1.65;
+        radial-gradient(circle at var(--mx) var(--my), rgba(56, 189, 248, 0.16), transparent 25rem),
+        radial-gradient(circle at 12% 8%, rgba(139, 92, 246, 0.34), transparent 28rem),
+        radial-gradient(circle at 88% 10%, rgba(25, 242, 189, 0.18), transparent 27rem),
+        linear-gradient(180deg, #060912 0%, #0a1020 46%, #060912 100%);
+      line-height: 1.7;
       overflow-x: hidden;
+      isolation: isolate;
     }
 
     body::before {
       content: "";
       position: fixed;
       inset: 0;
-      z-index: -2;
+      z-index: -5;
+      pointer-events: none;
       background-image:
-        linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
-      background-size: 54px 54px;
-      mask-image: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent 78%);
+        linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+      background-size: 64px 64px;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,0.86), transparent 80%);
     }
 
     body::after {
       content: "";
       position: fixed;
       inset: 0;
-      z-index: -1;
+      z-index: -4;
       pointer-events: none;
-      background: radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.2) 72%, rgba(0, 0, 0, 0.56) 100%);
+      background:
+        radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.18) 58%, rgba(0, 0, 0, 0.64) 100%),
+        linear-gradient(115deg, transparent 8%, rgba(255,255,255,0.025), transparent 42%);
     }
 
     a {
       color: inherit;
       text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    ::selection {
+      color: #fff;
+      background: rgba(25, 242, 189, 0.28);
+    }
+
+    #neuralCanvas {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -3;
+      opacity: 0.42;
+      pointer-events: none;
+    }
+
+    .aurora {
+      position: fixed;
+      inset: -20%;
+      z-index: -2;
+      pointer-events: none;
+      opacity: 0.52;
+      filter: blur(50px) saturate(1.25);
+      background:
+        radial-gradient(circle at 18% 18%, rgba(139,92,246,0.38), transparent 26%),
+        radial-gradient(circle at 82% 18%, rgba(25,242,189,0.20), transparent 24%),
+        radial-gradient(circle at 52% 88%, rgba(56,189,248,0.18), transparent 28%);
+      animation: auroraMove 18s ease-in-out infinite alternate;
+    }
+
+    @keyframes auroraMove {
+      0% { transform: translate3d(-1%, -1%, 0) rotate(0deg) scale(1); }
+      100% { transform: translate3d(1.5%, 1%, 0) rotate(4deg) scale(1.06); }
+    }
+
+    .noise {
+      position: fixed;
+      inset: 0;
+      z-index: 30;
+      pointer-events: none;
+      opacity: 0.025;
+      mix-blend-mode: screen;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 220 220' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.68'/%3E%3C/svg%3E");
+    }
+
+    .scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 3px;
+      z-index: 999;
+      background: linear-gradient(90deg, var(--accent), var(--accent-3), var(--accent-2), var(--accent-4));
+      box-shadow: 0 0 26px rgba(25, 242, 189, 0.82);
     }
 
     .page {
@@ -84,19 +158,28 @@
     }
 
     .glass {
-      background: linear-gradient(180deg, rgba(255,255,255,0.12), rgba(255,255,255,0.06));
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.12), rgba(255,255,255,0.055)),
+        rgba(8, 13, 28, 0.82);
       border: 1px solid var(--line);
       box-shadow: var(--shadow);
-      backdrop-filter: blur(20px);
+      backdrop-filter: blur(22px) saturate(1.2);
+    }
+
+    .gradient-text {
+      background: linear-gradient(115deg, #ffffff 4%, #d7ccff 28%, #86fff1 68%, #f8c55a 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
     }
 
     header {
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(8, 11, 22, 0.72);
-      backdrop-filter: blur(22px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(6, 9, 18, 0.78);
+      backdrop-filter: blur(24px) saturate(1.2);
+      border-bottom: 1px solid rgba(219, 231, 255, 0.10);
     }
 
     nav {
@@ -106,72 +189,120 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 24px;
+      gap: 22px;
     }
 
     .brand {
       display: inline-flex;
       align-items: center;
-      gap: 12px;
-      font-weight: 900;
-      letter-spacing: -0.035em;
+      gap: 13px;
+      font-weight: 950;
+      letter-spacing: -0.04em;
+      perspective: 900px;
     }
 
     .brand-mark {
-      width: 46px;
-      height: 46px;
-      border-radius: 16px;
+      position: relative;
+      width: 48px;
+      height: 48px;
+      border-radius: 17px;
       display: grid;
       place-items: center;
-      background: conic-gradient(from 210deg, var(--accent), var(--accent-3), var(--accent-2), var(--accent));
-      box-shadow: 0 16px 40px rgba(139, 92, 246, 0.38);
+      background:
+        linear-gradient(145deg, rgba(255,255,255,0.24), transparent 38%),
+        conic-gradient(from 210deg, var(--accent), var(--accent-3), var(--accent-2), var(--accent));
+      box-shadow: 0 16px 42px rgba(139, 92, 246, 0.38), inset 0 1px 0 rgba(255,255,255,0.36);
       font-weight: 950;
+      transform-style: preserve-3d;
+      animation: brandFloat 5s ease-in-out infinite;
+    }
+
+    .brand-mark::after {
+      content: "";
+      position: absolute;
+      inset: 7px;
+      border-radius: 13px;
+      border: 1px solid rgba(255,255,255,0.28);
+      transform: translateZ(10px);
+    }
+
+    @keyframes brandFloat {
+      0%, 100% { transform: rotateX(0deg) rotateY(0deg) translateY(0); }
+      50% { transform: rotateX(7deg) rotateY(-9deg) translateY(-2px); }
     }
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 7px;
       padding: 8px;
       border-radius: 999px;
-      background: rgba(255, 255, 255, 0.055);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.065);
+      border: 1px solid rgba(255, 255, 255, 0.105);
+      box-shadow: 0 14px 45px rgba(0,0,0,0.20);
     }
 
     .nav-links a {
       color: var(--muted);
       font-size: 0.92rem;
+      font-weight: 740;
       padding: 8px 12px;
       border-radius: 999px;
       transition: 0.25s ease;
     }
 
-    .nav-links a:hover {
-      color: var(--text);
-      background: rgba(255, 255, 255, 0.09);
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.13);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.10);
     }
 
     .hero {
       min-height: calc(100vh - 78px);
       display: grid;
-      grid-template-columns: 1.08fr 0.92fr;
+      grid-template-columns: 1.02fr 0.98fr;
       align-items: center;
-      gap: 44px;
-      padding: 82px 0 74px;
+      gap: 42px;
+      padding: 74px 0 66px;
+    }
+
+    .hero-copy {
+      position: relative;
+      z-index: 2;
+      padding: 34px;
+      border-radius: var(--radius-xl);
+      background:
+        linear-gradient(180deg, rgba(10, 17, 35, 0.92), rgba(10, 17, 35, 0.70)),
+        rgba(10, 17, 35, 0.82);
+      border: 1px solid rgba(219, 231, 255, 0.16);
+      box-shadow: 0 24px 80px rgba(0,0,0,0.30);
+    }
+
+    .hero-copy::before {
+      content: "";
+      position: absolute;
+      inset: -1px;
+      z-index: -1;
+      border-radius: inherit;
+      background: linear-gradient(135deg, rgba(139,92,246,0.40), rgba(56,189,248,0.18), rgba(25,242,189,0.32));
+      opacity: 0.34;
     }
 
     .eyebrow {
       display: inline-flex;
       align-items: center;
       gap: 10px;
+      max-width: 100%;
       padding: 9px 14px;
-      margin-bottom: 24px;
-      color: var(--soft);
+      margin-bottom: 23px;
+      color: #ecf4ff;
       font-size: 0.92rem;
+      font-weight: 760;
       border-radius: 999px;
-      background: rgba(255, 255, 255, 0.07);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      box-shadow: 0 10px 34px rgba(0, 0, 0, 0.18);
+      background: rgba(255, 255, 255, 0.085);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      box-shadow: 0 10px 34px rgba(0,0,0,0.18);
     }
 
     .pulse {
@@ -181,85 +312,95 @@
       border-radius: 999px;
       background: var(--accent-2);
       box-shadow: 0 0 24px var(--accent-2);
+      flex: 0 0 auto;
     }
 
     .pulse::after {
       content: "";
       position: absolute;
-      inset: -6px;
+      inset: -7px;
       border-radius: inherit;
-      border: 1px solid rgba(33, 230, 167, 0.5);
+      border: 1px solid rgba(25, 242, 189, 0.55);
       animation: pulse 1.8s ease-out infinite;
     }
 
     @keyframes pulse {
-      from { transform: scale(0.7); opacity: 0.85; }
-      to { transform: scale(1.8); opacity: 0; }
+      from { transform: scale(0.68); opacity: 0.92; }
+      to { transform: scale(1.9); opacity: 0; }
     }
 
     h1 {
-      max-width: 820px;
-      font-size: clamp(3rem, 7.3vw, 6.65rem);
-      line-height: 0.91;
-      letter-spacing: -0.085em;
+      max-width: 860px;
+      font-size: clamp(2.85rem, 6.7vw, 6.25rem);
+      line-height: 0.93;
+      letter-spacing: -0.084em;
       margin-bottom: 26px;
-    }
-
-    .gradient-text {
-      background: linear-gradient(115deg, #ffffff 8%, #c7bbff 35%, #88fff0 72%, #f5c451 100%);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
+      text-wrap: balance;
     }
 
     .hero-text {
       max-width: 760px;
-      color: var(--muted);
-      font-size: clamp(1.05rem, 1.7vw, 1.22rem);
-      margin-bottom: 34px;
+      color: var(--soft);
+      font-size: clamp(1.05rem, 1.55vw, 1.22rem);
+      margin-bottom: 32px;
     }
 
     .hero-text strong {
-      color: var(--text);
-      font-weight: 750;
+      color: #fff;
+      font-weight: 860;
     }
 
     .actions {
       display: flex;
       flex-wrap: wrap;
       gap: 14px;
-      margin-bottom: 30px;
+      margin-bottom: 28px;
     }
 
     .btn {
+      position: relative;
       min-height: 52px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 10px;
-      padding: 0 21px;
+      padding: 0 22px;
       border-radius: 999px;
-      font-weight: 800;
+      font-weight: 900;
       letter-spacing: -0.01em;
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      overflow: hidden;
+      transform: translateZ(0);
+      transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
       white-space: nowrap;
     }
 
+    .btn::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      transform: translateX(-110%);
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.26), transparent);
+      transition: transform 0.55s ease;
+    }
+
+    .btn:hover::before { transform: translateX(110%); }
+
     .btn-primary {
-      background: linear-gradient(135deg, var(--accent), #a78bfa 52%, #6d5dfc);
-      color: white;
-      box-shadow: 0 18px 42px rgba(139, 92, 246, 0.36);
+      background: linear-gradient(135deg, #7c3aed, #38bdf8 55%, #19f2bd);
+      color: #fff;
+      box-shadow: 0 18px 44px rgba(56, 189, 248, 0.22), 0 12px 34px rgba(139, 92, 246, 0.24);
     }
 
     .btn-secondary {
-      background: rgba(255, 255, 255, 0.08);
-      color: var(--text);
+      background: rgba(255, 255, 255, 0.105);
+      color: #fff;
     }
 
     .btn:hover {
-      transform: translateY(-4px);
-      border-color: rgba(255, 255, 255, 0.32);
+      transform: translateY(-4px) scale(1.015);
+      border-color: rgba(255, 255, 255, 0.34);
+      box-shadow: 0 22px 54px rgba(0,0,0,0.34);
     }
 
     .micro-row {
@@ -267,7 +408,7 @@
       flex-wrap: wrap;
       gap: 10px;
       color: var(--muted);
-      font-size: 0.93rem;
+      font-size: 0.94rem;
     }
 
     .micro-pill {
@@ -276,152 +417,302 @@
       gap: 8px;
       padding: 8px 12px;
       border-radius: 999px;
-      background: rgba(255, 255, 255, 0.055);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.075);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #eaf2ff;
+      font-weight: 720;
     }
 
-    .showcase {
+    .hero-stage {
       position: relative;
-      border-radius: var(--radius-xl);
+      min-height: 660px;
+      perspective: 1300px;
+      display: grid;
+      place-items: center;
+    }
+
+    .orbit-field {
+      position: absolute;
+      inset: 6% 0 0 0;
+      transform-style: preserve-3d;
+      pointer-events: none;
+      animation: stageBreath 8s ease-in-out infinite;
+    }
+
+    @keyframes stageBreath {
+      0%,100% { transform: rotateX(58deg) rotateZ(-6deg) scale(0.96); }
+      50% { transform: rotateX(60deg) rotateZ(6deg) scale(1.02); }
+    }
+
+    .orbit-ring {
+      position: absolute;
+      inset: 50%;
+      width: var(--size);
+      height: var(--size);
+      margin: calc(var(--size) / -2);
+      border-radius: 50%;
+      border: 1px solid rgba(219, 231, 255, 0.20);
+      box-shadow: 0 0 40px rgba(56,189,248,0.08), inset 0 0 28px rgba(25,242,189,0.06);
+      animation: orbitSpin var(--speed) linear infinite;
+    }
+
+    .orbit-ring::before {
+      content: "";
+      position: absolute;
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      top: -7px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--dot);
+      box-shadow: 0 0 24px var(--dot);
+    }
+
+    .ring-1 { --size: 430px; --speed: 17s; --dot: #19f2bd; }
+    .ring-2 { --size: 545px; --speed: 23s; --dot: #8b5cf6; animation-direction: reverse; }
+    .ring-3 { --size: 660px; --speed: 32s; --dot: #38bdf8; }
+
+    @keyframes orbitSpin { to { transform: rotateZ(360deg); } }
+
+    .profile-stack {
+      position: relative;
+      width: min(455px, 100%);
+      transform-style: preserve-3d;
+      z-index: 3;
+    }
+
+    .profile-card {
+      position: relative;
+      min-height: 548px;
       padding: 24px;
+      border-radius: 38px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.14), rgba(255,255,255,0.06)),
+        rgba(8, 13, 28, 0.88);
+      border: 1px solid rgba(219, 231, 255, 0.20);
+      box-shadow: var(--shadow), inset 0 1px 0 rgba(255,255,255,0.18);
+      backdrop-filter: blur(22px) saturate(1.18);
+      transform-style: preserve-3d;
       overflow: hidden;
     }
 
-    .showcase::before {
+    .profile-card::before {
       content: "";
       position: absolute;
       inset: -2px;
-      z-index: -1;
-      background: linear-gradient(135deg, rgba(139, 92, 246, 0.65), rgba(56, 189, 248, 0.22), rgba(33, 230, 167, 0.5));
       border-radius: inherit;
-      opacity: 0.8;
+      background: conic-gradient(from 180deg, transparent, rgba(25,242,189,0.42), transparent, rgba(139,92,246,0.42), transparent, rgba(56,189,248,0.42), transparent);
+      opacity: 0.70;
+      z-index: -1;
+      animation: borderSpin 10s linear infinite;
     }
 
-    .showcase-inner {
-      position: relative;
-      padding: 28px;
-      border-radius: 28px;
-      background: rgba(8, 11, 22, 0.76);
-      border: 1px solid rgba(255,255,255,0.12);
-      overflow: hidden;
-    }
-
-    .showcase-inner::after {
+    .profile-card::after {
       content: "";
       position: absolute;
-      top: -100px;
-      right: -100px;
-      width: 240px;
-      height: 240px;
-      border-radius: 50%;
-      background: rgba(33, 230, 167, 0.16);
-      filter: blur(18px);
+      inset: 1px;
+      border-radius: 37px;
+      background: radial-gradient(circle at 80% 0%, rgba(25,242,189,0.16), transparent 38%), rgba(8,13,28,0.88);
+      z-index: -1;
     }
 
-    .avatar {
+    @keyframes borderSpin { to { transform: rotate(360deg); } }
+
+    .portrait-wrap {
       position: relative;
-      width: 122px;
-      height: 122px;
-      border-radius: 34px;
-      padding: 4px;
-      background: conic-gradient(from 220deg, var(--accent), var(--accent-3), var(--accent-2), var(--accent-4), var(--accent));
-      box-shadow: 0 22px 56px rgba(56, 189, 248, 0.22);
-      margin-bottom: 24px;
+      height: 260px;
+      border-radius: 30px;
       overflow: hidden;
-      flex-shrink: 0;
+      transform: translateZ(48px);
+      border: 1px solid rgba(255,255,255,0.20);
+      box-shadow: 0 22px 58px rgba(0,0,0,0.36);
+      background: #0a1020;
     }
 
-    .avatar img {
+    .portrait-wrap img {
       width: 100%;
       height: 100%;
-      display: block;
       object-fit: cover;
-      object-position: center top;
-      border-radius: 30px;
+      object-position: center 28%;
+      display: block;
+      filter: saturate(1.06) contrast(1.04);
+      transform: scale(1.025);
     }
 
-    .showcase h2 {
+    .portrait-wrap::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 38%, rgba(4,7,17,0.38)), linear-gradient(115deg, rgba(255,255,255,0.12), transparent 28%);
+    }
+
+    .profile-body {
       position: relative;
-      font-size: 1.75rem;
-      letter-spacing: -0.045em;
-      margin-bottom: 8px;
+      z-index: 2;
+      padding: 23px 5px 3px;
+      transform: translateZ(38px);
+    }
+
+    .profile-body h2 {
+      font-size: 2.05rem;
+      line-height: 1.03;
+      letter-spacing: -0.055em;
+      margin-bottom: 9px;
+      text-shadow: 0 10px 34px rgba(0,0,0,0.32);
     }
 
     .role {
       color: var(--accent-2);
-      font-weight: 800;
-      margin-bottom: 18px;
+      font-weight: 950;
+      margin-bottom: 14px;
+      letter-spacing: -0.02em;
     }
 
-    .showcase p {
-      position: relative;
-      color: var(--muted);
-      margin-bottom: 24px;
+    .profile-body p {
+      color: var(--soft);
+      font-size: 0.98rem;
+      margin-bottom: 18px;
     }
 
     .metric-grid {
-      position: relative;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 12px;
-      margin-bottom: 18px;
+      transform: translateZ(34px);
     }
 
     .metric {
       padding: 16px;
-      border-radius: var(--radius-md);
-      background: rgba(255, 255, 255, 0.075);
-      border: 1px solid rgba(255, 255, 255, 0.11);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.085);
+      border: 1px solid rgba(255, 255, 255, 0.13);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.07);
+      transition: 0.28s ease;
+    }
+
+    .metric:hover {
+      transform: translateY(-4px) translateZ(12px);
+      background: rgba(255,255,255,0.13);
     }
 
     .metric strong {
       display: block;
-      font-size: 1.2rem;
+      font-size: 1.22rem;
+      line-height: 1.1;
       letter-spacing: -0.035em;
+      color: #fff;
     }
 
     .metric span {
       color: var(--muted);
-      font-size: 0.85rem;
+      font-size: 0.84rem;
     }
 
-    .availability {
+    .floating-chip {
+      position: absolute;
+      z-index: 4;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(13, 19, 38, 0.82);
+      border: 1px solid rgba(219,231,255,0.20);
+      color: #fff;
+      font-weight: 900;
+      font-size: 0.88rem;
+      box-shadow: 0 16px 44px rgba(0,0,0,0.30), inset 0 1px 0 rgba(255,255,255,0.12);
+      backdrop-filter: blur(16px);
+      transform-style: preserve-3d;
+      animation: chipFloat 5.4s ease-in-out infinite;
+    }
+
+    .chip-1 { top: 8%; left: -2%; animation-delay: -0.6s; }
+    .chip-2 { top: 28%; right: -8%; animation-delay: -1.8s; }
+    .chip-3 { bottom: 13%; left: -9%; animation-delay: -3s; }
+    .chip-4 { bottom: 4%; right: 0%; animation-delay: -4s; }
+
+    @keyframes chipFloat {
+      0%,100% { transform: translate3d(0,0,70px) rotateX(0deg) rotateY(0deg); }
+      50% { transform: translate3d(0,-14px,100px) rotateX(7deg) rotateY(-12deg); }
+    }
+
+    .cube-wrap {
+      position: absolute;
+      right: 9%;
+      top: 13%;
+      width: 92px;
+      height: 92px;
+      perspective: 720px;
+      z-index: 5;
+      pointer-events: none;
+    }
+
+    .cube {
       position: relative;
-      padding: 16px;
-      border-radius: 20px;
-      background: rgba(33, 230, 167, 0.09);
-      border: 1px solid rgba(33, 230, 167, 0.18);
-      color: #dffdf3;
-      font-size: 0.94rem;
+      width: 92px;
+      height: 92px;
+      transform-style: preserve-3d;
+      animation: cubeSpin 12s linear infinite;
+    }
+
+    .cube span {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      border-radius: 18px;
+      background: linear-gradient(135deg, rgba(255,255,255,0.18), rgba(255,255,255,0.06));
+      border: 1px solid rgba(255,255,255,0.20);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.16), 0 12px 34px rgba(0,0,0,0.26);
+      color: #fff;
+      font-weight: 950;
+      letter-spacing: -0.04em;
+      backdrop-filter: blur(12px);
+    }
+
+    .cube .front { transform: translateZ(46px); background-color: rgba(139, 92, 246, 0.20); }
+    .cube .back { transform: rotateY(180deg) translateZ(46px); background-color: rgba(25, 242, 189, 0.16); }
+    .cube .right { transform: rotateY(90deg) translateZ(46px); background-color: rgba(56, 189, 248, 0.16); }
+    .cube .left { transform: rotateY(-90deg) translateZ(46px); background-color: rgba(248, 197, 90, 0.16); }
+    .cube .top { transform: rotateX(90deg) translateZ(46px); background-color: rgba(255, 76, 168, 0.12); }
+    .cube .bottom { transform: rotateX(-90deg) translateZ(46px); background-color: rgba(255,255,255,0.08); }
+
+    @keyframes cubeSpin {
+      from { transform: rotateX(-16deg) rotateY(0deg) rotateZ(0deg); }
+      to { transform: rotateX(344deg) rotateY(360deg) rotateZ(360deg); }
     }
 
     section {
-      padding: 78px 0;
+      padding: 74px 0;
     }
 
     .section-head {
-      max-width: 820px;
+      max-width: 850px;
       margin-bottom: 32px;
+      padding: 26px;
+      border-radius: 30px;
+      background: rgba(7, 12, 25, 0.62);
+      border: 1px solid rgba(219, 231, 255, 0.10);
     }
 
     .section-label {
       color: var(--accent-2);
       font-size: 0.78rem;
       text-transform: uppercase;
-      letter-spacing: 0.16em;
-      font-weight: 900;
+      letter-spacing: 0.17em;
+      font-weight: 950;
       margin-bottom: 12px;
     }
 
     h3 {
-      font-size: clamp(2.15rem, 4.7vw, 3.85rem);
+      font-size: clamp(2.15rem, 4.5vw, 3.78rem);
       line-height: 1;
-      letter-spacing: -0.065em;
+      letter-spacing: -0.068em;
       margin-bottom: 16px;
+      text-wrap: balance;
     }
 
     .section-head p {
-      color: var(--muted);
+      color: var(--soft);
       font-size: 1.07rem;
     }
 
@@ -433,102 +724,143 @@
 
     .card {
       position: relative;
-      min-height: 260px;
+      min-height: 278px;
       padding: 26px;
       border-radius: var(--radius-lg);
       background: var(--surface);
       border: 1px solid var(--line);
+      box-shadow: var(--shadow-soft);
       overflow: hidden;
-      transition: 0.28s ease;
+      transform-style: preserve-3d;
+      transition: background 0.28s ease, border-color 0.28s ease, transform 0.28s ease;
     }
 
     .card::before {
       content: "";
       position: absolute;
-      inset: auto -60px -80px auto;
-      width: 170px;
-      height: 170px;
+      inset: auto -65px -84px auto;
+      width: 185px;
+      height: 185px;
       border-radius: 50%;
       background: rgba(139, 92, 246, 0.16);
-      filter: blur(12px);
+      filter: blur(10px);
       transition: 0.28s ease;
     }
 
+    .card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(115deg, rgba(255,255,255,0.08), transparent 34%);
+      opacity: 0.7;
+      pointer-events: none;
+    }
+
     .card:hover {
-      transform: translateY(-7px);
-      background: var(--surface-strong);
-      border-color: rgba(255, 255, 255, 0.24);
+      background: var(--surface-2);
+      border-color: var(--line-strong);
     }
 
     .card:hover::before {
-      background: rgba(33, 230, 167, 0.16);
-      transform: scale(1.08);
+      background: rgba(25, 242, 189, 0.17);
+      transform: scale(1.1);
     }
 
     .icon {
       position: relative;
-      width: 48px;
-      height: 48px;
+      z-index: 2;
+      width: 52px;
+      height: 52px;
       display: grid;
       place-items: center;
-      margin-bottom: 20px;
-      border-radius: 17px;
-      background: linear-gradient(135deg, rgba(139, 92, 246, 0.26), rgba(56, 189, 248, 0.12));
+      margin-bottom: 22px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, rgba(139, 92, 246, 0.28), rgba(56, 189, 248, 0.12));
       color: var(--soft);
-      font-size: 1.35rem;
-      border: 1px solid rgba(255, 255, 255, 0.12);
+      font-size: 1.4rem;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.10), 0 14px 34px rgba(0,0,0,0.20);
+      transform: translateZ(30px);
     }
 
     .card h4 {
       position: relative;
-      font-size: 1.18rem;
-      letter-spacing: -0.035em;
-      margin-bottom: 10px;
+      z-index: 2;
+      font-size: 1.22rem;
+      line-height: 1.15;
+      letter-spacing: -0.04em;
+      margin-bottom: 11px;
+      color: #fff;
+      transform: translateZ(26px);
     }
 
     .card p,
     .card li {
       position: relative;
-      color: var(--muted);
+      z-index: 2;
+      color: var(--soft);
       font-size: 0.98rem;
+      transform: translateZ(18px);
     }
 
-    .feature-band {
+    .research-lab {
       display: grid;
       grid-template-columns: 1fr 0.78fr;
       gap: 18px;
       align-items: stretch;
     }
 
-    .feature-main,
-    .feature-side,
+    .lab-main,
+    .lab-side,
     .publication-card,
-    .contact-card {
+    .contact-card,
+    .note-box {
+      position: relative;
       border-radius: var(--radius-xl);
       padding: 30px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.105), rgba(255,255,255,0.055));
+      background: var(--surface);
       border: 1px solid var(--line);
-      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.26);
+      box-shadow: var(--shadow-soft);
+      overflow: hidden;
     }
 
-    .feature-main h4,
-    .feature-side h4,
+    .lab-main::before,
+    .lab-side::before,
+    .publication-card::before,
+    .contact-card::before,
+    .note-box::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at top right, rgba(25,242,189,0.12), transparent 42%),
+        linear-gradient(115deg, rgba(255,255,255,0.075), transparent 42%);
+      pointer-events: none;
+    }
+
+    .lab-main h4,
+    .lab-side h4,
     .publication-card h4,
-    .contact-card h4 {
-      font-size: 1.5rem;
-      line-height: 1.15;
-      letter-spacing: -0.045em;
-      margin-bottom: 12px;
+    .contact-card h4,
+    .note-box h4 {
+      position: relative;
+      font-size: 1.58rem;
+      line-height: 1.12;
+      letter-spacing: -0.05em;
+      margin-bottom: 13px;
     }
 
-    .feature-main p,
-    .feature-side p,
+    .lab-main p,
+    .lab-side p,
     .publication-card p,
-    .contact-card p {
-      color: var(--muted);
+    .contact-card p,
+    .note-box p {
+      position: relative;
+      color: var(--soft);
     }
 
     .tag-row {
+      position: relative;
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
@@ -538,27 +870,129 @@
     .tag {
       padding: 8px 12px;
       border-radius: 999px;
-      color: #e8edff;
-      background: rgba(255, 255, 255, 0.075);
-      border: 1px solid rgba(255, 255, 255, 0.11);
+      color: #eff5ff;
+      background: rgba(255, 255, 255, 0.09);
+      border: 1px solid rgba(255, 255, 255, 0.13);
       font-size: 0.88rem;
+      font-weight: 720;
     }
 
-    .feature-side {
+    .workflow-3d {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 28px;
+      perspective: 1000px;
+    }
+
+    .flow-node {
+      position: relative;
+      min-height: 135px;
+      padding: 18px;
+      border-radius: 22px;
+      background: rgba(255,255,255,0.078);
+      border: 1px solid rgba(255,255,255,0.14);
+      transform-style: preserve-3d;
+      animation: flowFloat 6s ease-in-out infinite;
+    }
+
+    .flow-node:nth-child(2) { animation-delay: -1.6s; }
+    .flow-node:nth-child(3) { animation-delay: -3.1s; }
+
+    .flow-node b {
+      display: block;
+      color: #fff;
+      font-size: 1.03rem;
+      margin-bottom: 8px;
+      letter-spacing: -0.03em;
+    }
+
+    .flow-node span {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .flow-node::after {
+      content: "";
+      position: absolute;
+      top: 28px;
+      right: -20px;
+      width: 26px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent-3), transparent);
+      box-shadow: 0 0 18px rgba(56,189,248,0.8);
+    }
+
+    .flow-node:last-child::after { display: none; }
+
+    @keyframes flowFloat {
+      0%,100% { transform: rotateX(0deg) rotateY(0deg) translateY(0); }
+      50% { transform: rotateX(5deg) rotateY(-7deg) translateY(-6px); }
+    }
+
+    .lab-side {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       gap: 22px;
-      background:
-        radial-gradient(circle at top right, rgba(33,230,167,0.16), transparent 42%),
-        linear-gradient(180deg, rgba(255,255,255,0.105), rgba(255,255,255,0.055));
     }
 
     .quote {
       font-size: 1.18rem;
-      color: var(--soft);
+      color: #f1f6ff;
       letter-spacing: -0.02em;
     }
+
+    .mini-orbit {
+      position: relative;
+      height: 210px;
+      display: grid;
+      place-items: center;
+      perspective: 800px;
+    }
+
+    .mini-orbit .core {
+      width: 74px;
+      height: 74px;
+      border-radius: 24px;
+      display: grid;
+      place-items: center;
+      background: conic-gradient(from 210deg, var(--accent), var(--accent-3), var(--accent-2), var(--accent));
+      font-weight: 950;
+      box-shadow: 0 18px 54px rgba(25,242,189,0.24);
+      transform-style: preserve-3d;
+      animation: coreFloat 5s ease-in-out infinite;
+    }
+
+    .mini-orbit .halo {
+      position: absolute;
+      width: var(--s);
+      height: var(--s);
+      border-radius: 50%;
+      border: 1px solid rgba(219,231,255,0.18);
+      transform: rotateX(68deg);
+      animation: miniSpin var(--t) linear infinite;
+    }
+
+    .mini-orbit .h1 { --s: 146px; --t: 9s; }
+    .mini-orbit .h2 { --s: 190px; --t: 14s; animation-direction: reverse; }
+    .mini-orbit .h3 { --s: 232px; --t: 19s; }
+
+    .mini-orbit .halo::after {
+      content: "";
+      position: absolute;
+      top: -5px;
+      left: 50%;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--accent-2);
+      box-shadow: 0 0 20px var(--accent-2);
+    }
+
+    @keyframes miniSpin { to { transform: rotateX(68deg) rotateZ(360deg); } }
+    @keyframes coreFloat { 50% { transform: translateY(-8px) rotateX(10deg) rotateY(-12deg); } }
 
     .timeline {
       display: grid;
@@ -566,6 +1000,7 @@
     }
 
     .timeline-item {
+      position: relative;
       display: grid;
       grid-template-columns: 190px 1fr;
       gap: 22px;
@@ -573,27 +1008,44 @@
       border-radius: var(--radius-lg);
       background: var(--surface);
       border: 1px solid var(--line);
-      transition: 0.25s ease;
+      box-shadow: var(--shadow-soft);
+      transform-style: preserve-3d;
+      transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+      overflow: hidden;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 10% 20%, rgba(139,92,246,0.16), transparent 28%);
+      pointer-events: none;
     }
 
     .timeline-item:hover {
-      transform: translateY(-5px);
-      background: var(--surface-strong);
+      background: var(--surface-2);
+      border-color: var(--line-strong);
     }
 
     .timeline-date {
+      position: relative;
       color: var(--accent-2);
-      font-weight: 900;
+      font-weight: 950;
+      transform: translateZ(24px);
     }
 
     .timeline-item h4 {
+      position: relative;
       margin-bottom: 6px;
-      letter-spacing: -0.025em;
-      font-size: 1.1rem;
+      letter-spacing: -0.03em;
+      font-size: 1.12rem;
+      transform: translateZ(22px);
     }
 
     .timeline-item p {
-      color: var(--muted);
+      position: relative;
+      color: var(--soft);
+      transform: translateZ(16px);
     }
 
     .publication-card {
@@ -602,14 +1054,15 @@
       gap: 24px;
       align-items: center;
       background:
-        radial-gradient(circle at top right, rgba(139,92,246,0.22), transparent 34%),
+        radial-gradient(circle at top right, rgba(139,92,246,0.20), transparent 35%),
         radial-gradient(circle at bottom left, rgba(56,189,248,0.14), transparent 38%),
-        linear-gradient(180deg, rgba(255,255,255,0.11), rgba(255,255,255,0.06));
+        var(--surface);
     }
 
     .paper-meta {
+      position: relative;
       color: var(--accent-2);
-      font-weight: 850;
+      font-weight: 950;
       margin-bottom: 10px;
     }
 
@@ -621,6 +1074,7 @@
     }
 
     .contact-actions {
+      position: relative;
       display: grid;
       gap: 14px;
       margin-top: 22px;
@@ -633,44 +1087,28 @@
       gap: 18px;
       padding: 18px;
       border-radius: 20px;
-      background: rgba(255,255,255,0.075);
-      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.085);
+      border: 1px solid rgba(255,255,255,0.13);
       transition: 0.25s ease;
     }
 
     .contact-link:hover {
       transform: translateY(-4px);
-      background: rgba(255,255,255,0.12);
-      border-color: rgba(255,255,255,0.22);
+      background: rgba(255,255,255,0.13);
+      border-color: rgba(255,255,255,0.24);
     }
 
     .contact-link small {
       display: block;
       color: var(--muted);
       margin-bottom: 4px;
+      font-weight: 720;
     }
 
     .contact-link strong {
       word-break: break-word;
       letter-spacing: -0.02em;
-    }
-
-    .note-box {
-      padding: 22px;
-      border-radius: var(--radius-lg);
-      background:
-        radial-gradient(circle at top right, rgba(245,196,81,0.12), transparent 36%),
-        rgba(255,255,255,0.07);
-      border: 1px solid rgba(255,255,255,0.12);
-    }
-
-    .note-box h4 {
-      margin-bottom: 10px;
-      letter-spacing: -0.035em;
-    }
-
-    .note-box p {
-      color: var(--muted);
+      color: #fff;
     }
 
     footer {
@@ -678,25 +1116,27 @@
       color: var(--muted);
       text-align: center;
       border-top: 1px solid rgba(255,255,255,0.08);
+      background: rgba(0,0,0,0.12);
     }
 
     .reveal {
       opacity: 0;
-      transform: translateY(18px);
-      animation: reveal 0.8s ease forwards;
+      transform: translateY(24px);
+      transition: opacity 0.78s ease, transform 0.78s ease;
     }
 
-    .delay-1 { animation-delay: 0.08s; }
-    .delay-2 { animation-delay: 0.16s; }
-    .delay-3 { animation-delay: 0.24s; }
-
-    @keyframes reveal {
-      to { opacity: 1; transform: translateY(0); }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
 
-    @media (max-width: 980px) {
+    .delay-1 { transition-delay: 0.08s; }
+    .delay-2 { transition-delay: 0.16s; }
+    .delay-3 { transition-delay: 0.24s; }
+
+    @media (max-width: 1060px) {
       .hero,
-      .feature-band,
+      .research-lab,
       .publication-card,
       .contact-layout {
         grid-template-columns: 1fr;
@@ -706,6 +1146,12 @@
         min-height: auto;
       }
 
+      .hero-stage {
+        min-height: 620px;
+      }
+    }
+
+    @media (max-width: 920px) {
       .grid {
         grid-template-columns: 1fr 1fr;
       }
@@ -725,17 +1171,34 @@
         min-height: 70px;
       }
 
+      .brand span:last-child {
+        max-width: 210px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
       .hero {
-        padding: 56px 0 50px;
+        padding: 45px 0 42px;
+        gap: 28px;
+      }
+
+      .hero-copy {
+        padding: 24px;
       }
 
       h1 {
-        font-size: clamp(2.7rem, 16vw, 4.2rem);
+        font-size: clamp(2.65rem, 15vw, 4.2rem);
       }
 
       .grid,
-      .metric-grid {
+      .metric-grid,
+      .workflow-3d {
         grid-template-columns: 1fr;
+      }
+
+      .flow-node::after {
+        display: none;
       }
 
       .timeline-item {
@@ -752,13 +1215,64 @@
       }
 
       section {
-        padding: 58px 0;
+        padding: 55px 0;
+      }
+
+      .hero-stage {
+        min-height: 540px;
+      }
+
+      .profile-stack {
+        width: min(390px, 100%);
+      }
+
+      .profile-card {
+        min-height: auto;
+      }
+
+      .portrait-wrap {
+        height: 230px;
+      }
+
+      .floating-chip,
+      .cube-wrap {
+        display: none;
+      }
+
+      .orbit-field {
+        opacity: 0.48;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+
+      #neuralCanvas,
+      .aurora,
+      .orbit-field,
+      .cube-wrap {
+        display: none;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
       }
     }
   </style>
 </head>
 
 <body>
+  <canvas id="neuralCanvas" aria-hidden="true"></canvas>
+  <div class="aurora" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
   <header>
     <nav>
       <a class="brand" href="#top" aria-label="Mohammed Kashkoush homepage">
@@ -777,7 +1291,7 @@
 
   <main id="top" class="page">
     <section class="hero">
-      <div class="reveal">
+      <div class="hero-copy reveal">
         <div class="eyebrow"><span class="pulse"></span> Direct PhD Student · Department of Information Systems · University of Haifa</div>
         <h1>AI for understanding <span class="gradient-text">language, emotion, and human experience.</span></h1>
         <p class="hero-text">
@@ -797,35 +1311,46 @@
         </div>
       </div>
 
-      <aside class="showcase glass reveal delay-2" aria-label="Profile card">
-        <div class="showcase-inner">
-          <div class="avatar">
-            <img src="me.jpg" alt="Mohammed Kashkoush">
+      <aside class="hero-stage reveal delay-2" aria-label="3D profile showcase">
+        <div class="orbit-field" aria-hidden="true">
+          <span class="orbit-ring ring-1"></span>
+          <span class="orbit-ring ring-2"></span>
+          <span class="orbit-ring ring-3"></span>
+        </div>
+
+        <div class="cube-wrap" aria-hidden="true">
+          <div class="cube">
+            <span class="front">MK</span>
+            <span class="back">XAI</span>
+            <span class="right">LLM</span>
+            <span class="left">NLP</span>
+            <span class="top">AI</span>
+            <span class="bottom">AG</span>
           </div>
-          <h2>Mohammed Kashkoush</h2>
-          <div class="role">PhD Researcher · AI & Information Systems</div>
-          <p>
-            Exploring how intelligent systems can model text, explain emotional meaning, and support reliable human-centered AI research.
-          </p>
-          <div class="metric-grid">
-            <div class="metric">
-              <strong>PhD</strong>
-              <span>Direct track researcher</span>
+        </div>
+
+        <span class="floating-chip chip-1">Synthetic Data</span>
+        <span class="floating-chip chip-2">Agent Orchestration</span>
+        <span class="floating-chip chip-3">Narrative Engagement</span>
+        <span class="floating-chip chip-4">Explainable AI</span>
+
+        <div class="profile-stack tilt">
+          <div class="profile-card">
+            <div class="portrait-wrap">
+              <img src="me.jpg" alt="Mohammed Kashkoush" />
             </div>
-            <div class="metric">
-              <strong>AI</strong>
-              <span>LLMs, agents, XAI</span>
-            </div>
-            <div class="metric">
-              <strong>NLP</strong>
-              <span>Text and reviews</span>
-            </div>
-            <div class="metric">
-              <strong>Teaching</strong>
-              <span>Algorithms and AI systems</span>
+            <div class="profile-body">
+              <h2>Mohammed Kashkoush</h2>
+              <div class="role">PhD Researcher · AI & Information Systems</div>
+              <p>Exploring how intelligent systems can model text, explain emotional meaning, and support reliable human-centered AI research.</p>
+              <div class="metric-grid">
+                <div class="metric"><strong>PhD</strong><span>Direct track researcher</span></div>
+                <div class="metric"><strong>AI</strong><span>LLMs, agents, XAI</span></div>
+                <div class="metric"><strong>NLP</strong><span>Text and reviews</span></div>
+                <div class="metric"><strong>Teaching</strong><span>Algorithms and AI systems</span></div>
+              </div>
             </div>
           </div>
-          <div class="availability">Open to research discussions, academic collaboration, and AI-related projects.</div>
         </div>
       </aside>
     </section>
@@ -840,17 +1365,17 @@
       </div>
 
       <div class="grid">
-        <article class="card reveal delay-1">
+        <article class="card tilt reveal delay-1">
           <div class="icon">◈</div>
           <h4>Language Intelligence</h4>
           <p>Natural language processing, text mining, review analysis, semantic modeling, and large language model applications.</p>
         </article>
-        <article class="card reveal delay-2">
+        <article class="card tilt reveal delay-2">
           <div class="icon">✦</div>
           <h4>Agentic AI Systems</h4>
           <p>AI agents, agent orchestration, synthetic data generation, and intelligent pipelines for scalable research workflows.</p>
         </article>
-        <article class="card reveal delay-3">
+        <article class="card tilt reveal delay-3">
           <div class="icon">✺</div>
           <h4>Explainable Human-Centered AI</h4>
           <p>Emotion analysis, narrative transportation, identification, engagement processes, and interpretable AI models.</p>
@@ -867,12 +1392,28 @@
         </p>
       </div>
 
-      <div class="feature-band">
-        <div class="feature-main reveal delay-1">
+      <div class="research-lab">
+        <div class="lab-main reveal delay-1">
           <h4>Core research interests</h4>
           <p>
             My research combines computational modeling and behavioral interpretation. I am especially interested in how LLMs, synthetic annotations, and agent-based workflows can help model complex constructs such as emotion strength, identification, and narrative transportation.
           </p>
+
+          <div class="workflow-3d" aria-label="Research workflow">
+            <div class="flow-node">
+              <b>01 · Text Signals</b>
+              <span>Reviews, language patterns, emotions, narrative cues, and engagement indicators.</span>
+            </div>
+            <div class="flow-node">
+              <b>02 · AI Modeling</b>
+              <span>LLMs, synthetic data, NLP pipelines, and agent-based research workflows.</span>
+            </div>
+            <div class="flow-node">
+              <b>03 · Explainable Insight</b>
+              <span>Interpretable predictions connected to human experience and behavioral measures.</span>
+            </div>
+          </div>
+
           <div class="tag-row">
             <span class="tag">Natural Language Processing</span>
             <span class="tag">Large Language Models</span>
@@ -886,10 +1427,16 @@
           </div>
         </div>
 
-        <aside class="feature-side reveal delay-2">
+        <aside class="lab-side reveal delay-2">
           <div>
             <h4>Research vision</h4>
             <p class="quote">“AI should be accurate, but it should also be understandable, reliable, and useful for studying human experience.”</p>
+          </div>
+          <div class="mini-orbit" aria-hidden="true">
+            <span class="halo h1"></span>
+            <span class="halo h2"></span>
+            <span class="halo h3"></span>
+            <span class="core">AI</span>
           </div>
           <a class="btn btn-primary" href="mailto:mohmadk99@gmail.com?subject=Research%20collaboration">Discuss Collaboration</a>
         </aside>
@@ -906,14 +1453,14 @@
       </div>
 
       <div class="timeline">
-        <div class="timeline-item reveal delay-1">
+        <div class="timeline-item tilt reveal delay-1">
           <div class="timeline-date">Teaching Assistant</div>
           <div>
             <h4>Data Structures and Algorithms</h4>
             <p>Supported students in core algorithmic thinking, data structures, recursion, complexity, and practical problem solving.</p>
           </div>
         </div>
-        <div class="timeline-item reveal delay-2">
+        <div class="timeline-item tilt reveal delay-2">
           <div class="timeline-date">Teaching Assistant</div>
           <div>
             <h4>Recommendation Systems Based on Artificial Intelligence</h4>
@@ -932,7 +1479,7 @@
         </p>
       </div>
 
-      <article class="publication-card reveal delay-1">
+      <article class="publication-card tilt reveal delay-1">
         <div>
           <div class="paper-meta">ACM IUI Companion</div>
           <h4>Disentangling Anticipation: Polarity-Aware Emotion Strength for Explainable Rating Prediction</h4>
@@ -960,30 +1507,24 @@
       </div>
 
       <div class="contact-layout">
-        <div class="contact-card reveal delay-1">
+        <div class="contact-card tilt reveal delay-1">
           <h4>Send a message</h4>
           <p>
             A fully direct website message form requires a server or third-party form service. To keep this website simple and upload-ready, the button below opens your email app with a prepared subject.
           </p>
           <div class="contact-actions">
             <a class="contact-link" href="mailto:mohmadk99@gmail.com?subject=Message%20from%20your%20personal%20website">
-              <span>
-                <small>Email</small>
-                <strong>mohmadk99@gmail.com</strong>
-              </span>
+              <span><small>Email</small><strong>mohmadk99@gmail.com</strong></span>
               <span>→</span>
             </a>
             <a class="contact-link" href="https://www.linkedin.com/in/mohammed-kashkoush-002840262/" target="_blank" rel="noopener noreferrer">
-              <span>
-                <small>LinkedIn</small>
-                <strong>Mohammed Kashkoush</strong>
-              </span>
+              <span><small>LinkedIn</small><strong>Mohammed Kashkoush</strong></span>
               <span>→</span>
             </a>
           </div>
         </div>
 
-        <div class="note-box reveal delay-2">
+        <div class="note-box tilt reveal delay-2">
           <h4>Available for</h4>
           <p>
             Academic collaboration, NLP and LLM research discussions, AI agent workflows, synthetic data projects, data analysis, emotion analysis, and explainable AI applications.
@@ -1001,13 +1542,134 @@
   </main>
 
   <footer>
-    <div class="page">
-      © <span id="year"></span> Mohammed Kashkoush · Direct PhD Student in Information Systems · University of Haifa
-    </div>
+    <div class="page">© <span id="year"></span> Mohammed Kashkoush · Direct PhD Student in Information Systems · University of Haifa</div>
   </footer>
 
   <script>
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    const progress = document.getElementById("scrollProgress");
+    const navLinks = [...document.querySelectorAll(".nav-links a")];
+    const sections = navLinks.map(link => document.querySelector(link.getAttribute("href"))).filter(Boolean);
+
+    function updateScrollUI() {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      const pct = max > 0 ? (window.scrollY / max) * 100 : 0;
+      progress.style.width = pct + "%";
+
+      let current = "";
+      sections.forEach(section => {
+        const top = section.getBoundingClientRect().top;
+        if (top <= 120) current = "#" + section.id;
+      });
+      navLinks.forEach(link => link.classList.toggle("active", link.getAttribute("href") === current));
+    }
+
+    window.addEventListener("scroll", updateScrollUI, { passive: true });
+    updateScrollUI();
+
+    if (!prefersReducedMotion) {
+      window.addEventListener("pointermove", event => {
+        document.documentElement.style.setProperty("--mx", event.clientX + "px");
+        document.documentElement.style.setProperty("--my", event.clientY + "px");
+      }, { passive: true });
+    }
+
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.14 });
+
+    document.querySelectorAll(".reveal").forEach(el => revealObserver.observe(el));
+
+    if (!prefersReducedMotion) {
+      document.querySelectorAll(".tilt").forEach(card => {
+        card.addEventListener("pointermove", event => {
+          const rect = card.getBoundingClientRect();
+          const x = (event.clientX - rect.left) / rect.width - 0.5;
+          const y = (event.clientY - rect.top) / rect.height - 0.5;
+          const rotateX = (-y * 10).toFixed(2);
+          const rotateY = (x * 12).toFixed(2);
+          card.style.transform = `perspective(1100px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+        });
+
+        card.addEventListener("pointerleave", () => {
+          card.style.transform = "perspective(1100px) rotateX(0deg) rotateY(0deg) translateY(0)";
+        });
+      });
+    }
+
+    const canvas = document.getElementById("neuralCanvas");
+    const ctx = canvas.getContext("2d");
+    let width, height, dpr, points;
+
+    function resizeCanvas() {
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      width = canvas.width = Math.floor(window.innerWidth * dpr);
+      height = canvas.height = Math.floor(window.innerHeight * dpr);
+      canvas.style.width = window.innerWidth + "px";
+      canvas.style.height = window.innerHeight + "px";
+
+      const count = Math.min(78, Math.max(42, Math.floor(window.innerWidth / 18)));
+      points = Array.from({ length: count }, () => ({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        vx: (Math.random() - 0.5) * 0.22 * dpr,
+        vy: (Math.random() - 0.5) * 0.22 * dpr,
+        r: (Math.random() * 1.8 + 0.7) * dpr
+      }));
+    }
+
+    function drawNeural() {
+      ctx.clearRect(0, 0, width, height);
+      ctx.lineWidth = 1 * dpr;
+
+      for (let i = 0; i < points.length; i++) {
+        const p = points[i];
+        p.x += p.vx;
+        p.y += p.vy;
+        if (p.x < 0 || p.x > width) p.vx *= -1;
+        if (p.y < 0 || p.y > height) p.vy *= -1;
+
+        for (let j = i + 1; j < points.length; j++) {
+          const q = points[j];
+          const dx = p.x - q.x;
+          const dy = p.y - q.y;
+          const dist = Math.hypot(dx, dy);
+          const limit = 150 * dpr;
+          if (dist < limit) {
+            const alpha = (1 - dist / limit) * 0.26;
+            ctx.strokeStyle = `rgba(108, 221, 255, ${alpha})`;
+            ctx.beginPath();
+            ctx.moveTo(p.x, p.y);
+            ctx.lineTo(q.x, q.y);
+            ctx.stroke();
+          }
+        }
+
+        const gradient = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r * 4);
+        gradient.addColorStop(0, "rgba(25, 242, 189, 0.88)");
+        gradient.addColorStop(1, "rgba(56, 189, 248, 0)");
+        ctx.fillStyle = gradient;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r * 4, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      requestAnimationFrame(drawNeural);
+    }
+
+    if (!prefersReducedMotion) {
+      resizeCanvas();
+      drawNeural();
+      window.addEventListener("resize", resizeCanvas, { passive: true });
+    }
   </script>
 </body>
 </html>
